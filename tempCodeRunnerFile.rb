@@ -28,9 +28,9 @@ r101 = Room.new(101, hotel)
 r102 = Room.new(102, hotel)
 
 # Create parties
-party1 = Party.new("Party1", hotel)
-party2   = Party.new("Party2", hotel)
-party3  = Party.new("Party3", hotel)
+party1 = Party.new("Alice", hotel)
+party2   = Party.new("Bob", hotel)
+party3  = Party.new("Cara", hotel)
 
 # Guests add themselves to their party
 Guest.new("Amy", party1)
@@ -56,6 +56,7 @@ print "Trying to assign Party3 to r101: #{ok}\n"
 # Party1 leaves room 101
 left_party = hotel.move_party_to_no_room(party1)
 print "Room 101 leave_room returned: #{left_party.name}\n"
+
 
 print "After Party1 leaves r101 (and is checked back in without a room):\n"
 show(hotel)
